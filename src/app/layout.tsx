@@ -16,7 +16,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "CodeCraft",
+  title: "Orian",
   description: "AI-powered code editor",
 };
 

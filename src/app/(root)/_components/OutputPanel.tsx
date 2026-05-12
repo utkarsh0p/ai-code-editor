@@ -19,7 +19,7 @@ function OutputPanel() {
   };
 
   return (
-    <div className="relative bg-[var(--surface-1)] border border-[var(--border)] rounded-[var(--radius-md)] p-4">
+    <div className="relative bg-[var(--surface-1)] border border-[var(--border)] rounded-[var(--radius-md)] p-3 sm:p-4">
       {/* Header */}
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
@@ -54,7 +54,8 @@ function OutputPanel() {
       {/* Output Area */}
       <div
         className="bg-[var(--surface-2)] border border-[var(--border)]
-          rounded-[var(--radius-sm)] p-4 h-[600px] overflow-auto font-mono text-sm"
+          rounded-[var(--radius-sm)] p-3 sm:p-4 overflow-auto font-mono text-sm"
+        style={{ height: "clamp(240px, 50vh, 600px)" }}
       >
         {isRunning ? (
           <RunningCodeSkeleton />

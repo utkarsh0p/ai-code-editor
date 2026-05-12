@@ -49,7 +49,7 @@ export default function RegisterPage() {
             <Blocks className="size-7 text-[var(--flame)]" />
           </div>
           <h1 className="text-2xl font-heading text-[var(--text-primary)]">
-            CodeCraft
+            Orian
           </h1>
         </div>
 

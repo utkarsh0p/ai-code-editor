@@ -161,7 +161,7 @@ function EditorPanel() {
 
   return (
     <div className="relative">
-      <div className="relative bg-[var(--surface-1)] border border-[var(--border)] rounded-[var(--radius-md)] p-6">
+      <div className="relative bg-[var(--surface-1)] border border-[var(--border)] rounded-[var(--radius-md)] p-4 sm:p-6">
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center justify-center w-8 h-8 rounded-[var(--radius-sm)] bg-[var(--surface-2)] border border-[var(--border)]">
@@ -170,11 +170,11 @@ function EditorPanel() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setShowInlineWidget(true)}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-[100vw] transition-all font-body text-sm font-medium bg-[var(--surface-2)] text-[var(--text-secondary)] hover:text-white border border-[var(--border)] hover:bg-[var(--surface-3)]"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-[100vw] transition-all font-body text-sm font-medium bg-[var(--surface-2)] text-[var(--text-secondary)] hover:text-white border border-[var(--border)] hover:bg-[var(--surface-3)]"
             >
-              <Sparkles className="size-4" />
+              <Sparkles className="size-4 shrink-0" />
               <span>AI</span>
-              <span className="text-xs opacity-60">Ctrl+K</span>
+              <span className="hidden sm:inline text-xs opacity-60">Ctrl+K</span>
             </button>
 
             <div className="relative" ref={menuRef}>
@@ -249,7 +249,7 @@ function EditorPanel() {
         {/* Editor */}
         <div className="flex-1 relative group rounded-[var(--radius-sm)] overflow-hidden border border-[var(--border)]">
           <Editor
-            height="600px"
+            height="clamp(320px, 50vh, 600px)"
             language={LANGUAGE_CONFIG[language].monacoLanguage}
             onChange={handleEditorChange}
             theme={theme}

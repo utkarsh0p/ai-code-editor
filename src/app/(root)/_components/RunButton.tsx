@@ -13,20 +13,20 @@ function RunButton() {
       disabled={isRunning}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-[var(--radius-pill)]
+      className="relative inline-flex items-center gap-2 px-3 sm:px-5 py-2.5 rounded-[var(--radius-pill)]
         bg-[var(--flame)] hover:bg-[var(--flame-hover)] disabled:opacity-50 disabled:cursor-not-allowed
         text-white font-body font-medium text-sm transition-colors focus:outline-none
         focus-visible:ring-2 focus-visible:ring-[var(--flame)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)]"
     >
       {isRunning ? (
         <>
-          <Loader2 className="w-4 h-4 animate-spin" />
-          <span>Executing…</span>
+          <Loader2 className="w-4 h-4 animate-spin shrink-0" />
+          <span className="hidden sm:inline">Executing…</span>
         </>
       ) : (
         <>
-          <Play className="w-4 h-4" />
-          <span>Run Code</span>
+          <Play className="w-4 h-4 shrink-0" />
+          <span className="hidden sm:inline">Run Code</span>
         </>
       )}
     </motion.button>
